@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon test.js",
     "wait-for-mysql": "wait-for-mysql --username=admin --password=admin -D 'training'",
-    "test": "jest tests -i",
+    "test": "jest -i tests",
     "test:watch": "npm test --watchAll"
   },
   "keywords": [],
