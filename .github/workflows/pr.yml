@@ -14,8 +14,8 @@ jobs:
         with:
           node-version: 14
       - uses: isbang/compose-action@v1.3.2
-          with:
-            compose-file: "./docker-compose.yml"
+        with:
+          compose-file: "./docker-compose.yml"
 
       - name: Install dependencies
         run: npm install
