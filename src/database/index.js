@@ -7,7 +7,7 @@ function getConnection () {
     if (db.connection) {
         return db
     }
-    db.connection = new Sequelize('training', 'root', 'admin', {
+    db.connection = new Sequelize('training', 'admin', 'admin', {
         host: 'localhost',
         dialect: 'mysql'
     });
