@@ -15,15 +15,19 @@ describe('usersController', () => {
                 .expect(404)
         })
         test('it should update a found user', async () => {
-            const user = await seedUser('Batman')
+            try {
+                const user = await seedUser('Batman')
 
-            const name = 'Robin'
-            await request(app)
-                .put(`/api/users/${user.id}`).send({ name })
-                .expect(200)
+                const name = 'Robin'
+                await request(app)
+                    .put(`/api/users/${user.id}`).send({ name })
+                    .expect(200)
 
-            const updatedUser = await getUser(user.id)
-            expect(updatedUser.name).toEqual(name)
+                const updatedUser = await getUser(user.id)
+                expect(updatedUser.name).toEqual(name)
+            } catch (ex) {
+                console.log(ex)
+            }
         })
     })
 })

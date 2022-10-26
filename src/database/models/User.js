@@ -10,6 +10,8 @@ module.exports = (connection)  => {
         email: {
             type: DataTypes.STRING
         }
-    }, {});
+    }, {
+        underscored: true
+    });
     return User
 }
