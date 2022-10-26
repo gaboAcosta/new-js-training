@@ -4,17 +4,23 @@
   "description": "",
   "main": "test.js",
   "scripts": {
-    "start": "nodemon test.js"
+    "start": "nodemon test.js",
+    "test": "jest tests",
+    "test:watch": "npm test --watchAll"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "chalk": "^4.1.2",
-    "nodemon": "^2.0.20"
+    "jest": "^29.2.2",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.1"
   },
   "dependencies": {
     "body-parser": "^1.20.1",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.25.3"
   }
 }
