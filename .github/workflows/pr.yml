@@ -23,8 +23,8 @@ jobs:
       - name: Wait for MySQL
         run: npm run wait-for-mysql
 
-      - name: Run tests
-        run: npm run test
+      - name: Run migrations
+        run: npm run migrate
 
       - name: Run tests
         run: npm run test
